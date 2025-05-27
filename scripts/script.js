@@ -55,12 +55,50 @@ try {
   document.getElementById('conversaoDataDeCotacao').innerText =  `Data da cotação utilizada: ${dataFormatada}`;
   document.getElementById('taxaDe').innerText =  `1 ${textoMoedaDe} = ${1 * taxa} ${textoMoedaPara}`;
   document.getElementById('taxaPara').innerText =  `1 ${textoMoedaPara} = ${1 * taxaPara} ${textoMoedaDe}`;
-  
+  adicionarLinha(moedaDe, valorDe, moedaPara, valorPara);
   //caso encontre algum erro, vai dar erro ué
   } catch (erro) {
     document.getElementById('erro').innerText = "Erro ao buscar a cotação.";
   }
+
+  
 }
+
+function adicionarLinha(moedaDe, valor, moedaPara, valorConvertido) {
+  //criando um objeto de data e hora
+  const agora = new Date();
+
+  //pegando os valores desse objeto
+  const dia = String(agora.getDate()).padStart(2, '0');           
+  const mes = String(agora.getMonth() + 1).padStart(2, '0');       
+  const ano = agora.getFullYear();
+
+  const horas = String(agora.getHours()).padStart(2, '0');
+  const minutos = String(agora.getMinutes()).padStart(2, '0');
+
+  //formatando em data e hora
+  const dataEHora = `${dia}/${mes}/${ano} ${horas}:${minutos}`;
+
+  // pegando a tabela
+  var tabela = document.getElementById('tabelaHistorico').getElementsByTagName('tbody')[0];
+  // variável para inserir linhas
+  var novaLinha = tabela.insertRow();
+
+  //criando a linha
+  var celulaMoedaDe = novaLinha.insertCell(0);
+  var celulaValor = novaLinha.insertCell(1);
+  var celulaMoedaPara = novaLinha.insertCell(2);
+  var celulaValorConvertido = novaLinha.insertCell(3);
+  var celulaDataEHora = novaLinha.insertCell(4);
+
+  // adicionando as células
+  celulaMoedaDe.textContent = moedaDe;
+  celulaValor.textContent = valor;
+  celulaMoedaPara.textContent = moedaPara;
+  celulaValorConvertido.textContent = valorConvertido;
+  celulaDataEHora.textContent = dataEHora;
+}
+
 
 //faz o revesamento da moeda de origem para moeda de destino, trocando de posição
 document.getElementById('trocar').addEventListener('click', function() {
@@ -72,6 +110,15 @@ document.getElementById('trocar').addEventListener('click', function() {
   moedaDe.value = valorMoedaPara;
   moedaPara.value = valorMoedaDe;
   converter()
+});
+
+//copiar o valor convertido
+document.getElementById('copiarConversao').addEventListener('click', function() {
+  var textoComValor = document.getElementById("conversaoDoValorPara").innerText;
+  //divide o texto em partes
+  var partes = textoComValor.split(": ");
+  var valorConvertido = partes[1];  // "$ -,--"
+  navigator.clipboard.writeText(valorConvertido)
 });
 
 converter()

@@ -1,0 +1,257 @@
+.cabecalho-logo {
+    margin-top: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+}
+
+.cabecalho-logoicone {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.cabecalho-nomesite {
+    margin: 0px;
+    padding: 14px;
+}
+
+body {
+    font-family: sans-serif;
+    margin: auto;
+    margin-top: 0px;
+    padding: auto;
+    padding-top: 0px;
+    background-color: white;
+    color: black;
+    text-align: center; 
+}
+
+h1 {
+    color: black; 
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block; 
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+#valor {
+    width: 325px;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+
+#moedaDe,
+#moedaPara {
+    width: 325px;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+#trocar {
+margin: 10px auto;
+    display: inline-block;
+    background-color: #28a745; 
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100px; 
+    height: 40px;
+    font-size: 20px;
+}
+
+#trocar:hover {
+    background-color: #218838;  
+}
+
+#trocar {
+    font-size: 0; 
+}
+
+#trocar i {
+    font-size: 20px; 
+    color: white; 
+}
+
+button{
+    margin: 10px auto;
+    display: inline-block;
+    background-color: #28a745; 
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100px; 
+    height: 40px;
+    font-size: 20px;
+}
+
+
+button:hover {
+    background-color: #218838; 
+}
+button {
+    font-size: 0; 
+}
+button i {
+    font-size: 20px;
+    color: white; 
+}
+
+h2 {
+    color: black;
+    margin-top: 30px;
+}
+
+.scroll-historico {
+    height: 30vh;
+    max-height: 30vh; 
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+}
+
+
+#erro{
+    text-align: center;
+}
+#conversaoDe{
+    text-align: center;
+}
+#conversaoDoValorDe{
+    text-align: center;
+}
+#conversaoPara{
+    text-align: center;
+}
+#conversaoDoValorPara{
+    text-align: center;
+}
+#conversaoDataDeCotacao{
+    text-align: center;
+}
+#taxaDe{
+    text-align: center;
+}
+#taxaPara{
+    text-align: center;
+}
+
+#taxa
+{
+    width: 325px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+h3 {
+    margin-top: 20px;
+    color: black;
+}
+
+
+#erro {
+    color: red;
+    font-weight: bold;
+}
+
+#resultado {
+    width: 325px;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+.caixa-cinza {
+    margin: 50px;
+    background-color: lightgray; 
+    padding: 10px; 
+    border-radius: 1px; 
+    margin-top: 10px; 
+    text-align: center; 
+}
+
+.container-boxes {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    margin-top: 10px; 
+}
+
+.Resultadobox {
+    background-color: lightgray;
+    margin: 50px;
+    padding: 10px;
+    border-radius: 1px;
+    text-align: center;
+    width: 325px; 
+    margin-right: 5px; 
+    flex-grow: 1; 
+    
+}
+
+.taxabox {
+    background-color: lightgray;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 2px;
+    text-align: center;
+    width: 325px; 
+    margin-left: 5px; 
+    flex-grow: 1;
+}
+
+footer {
+    margin: auto;
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+
+.rodape-texto {
+    padding: 20px 0px 20px 20px;
+    text-align: start;
+}
+
+.rodape-info {
+    padding: 20px 20px 20px 0px;
+    text-align: end;
+}
