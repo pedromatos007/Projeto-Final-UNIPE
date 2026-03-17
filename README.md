@@ -1,7 +1,3 @@
-Perfeito! Se é um projeto de Desenvolvimento Web dentro do curso de Ciência da Computação, o foco do seu README deve mudar para a Stack Front-end/Back-end, a responsividade e a manipulação do DOM ou estado da aplicação.
-
-Aqui está uma versão sob medida para um desenvolvedor web:
-
 🌐 Currency Converter Web App | Projeto Final UNIPÊ
 Este é o projeto final da disciplina de Desenvolvimento Web do curso de Ciência da Computação (UNIPÊ). Trata-se de uma aplicação web moderna para conversão de moedas estrangeiras com taxas atualizadas em tempo real.
 
